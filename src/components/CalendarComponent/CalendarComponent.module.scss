@@ -1,0 +1,153 @@
+@import '../../styles/colors.scss';
+
+.calendarContent{
+    max-width: 450px;
+    padding: 0 12px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+}
+
+
+.header{
+    font-size: 24px;
+    font-weight: 500;
+    color: $darkBlue;
+    margin-bottom: 24px;
+}
+
+.calendar{
+    width: 326px;
+    padding: 30px;
+    background: $whiteColor;
+    border-radius: 8px;
+    border: 1px solid $purpleBorderColor;
+    color: $darkBlue;
+
+    &.errorUpload{
+        border: 1px solid $errorBorderColor;
+        box-shadow: 0 0 0 2px $errorBorderColor; 
+        background-color: $errorBackgroundColor;
+        outline: none;
+    }
+}
+
+.calendarHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+
+    button{
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+.calendarWeeks, .calendarDays{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+
+.day{
+    background: none;
+    border: none;
+    outline: none;
+    color: $darkBlue;
+    width: 32px;
+    height: 32px;
+    transition: .25s ease;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &.disabledDay{
+        color: $grayColor;
+        cursor: not-allowed
+    }
+
+    &.observanceDay{
+        cursor: pointer;
+        color: $grayColor;
+    }
+
+
+    &.selected{
+        background: $purpleColor;
+        border-radius: 50%;
+        color: $whiteColor;
+
+        &.observanceDay{
+            color: $whiteColor;
+            cursor: pointer;
+        }
+    }
+}
+
+.subHeader{
+    font-size: 16px;
+    font-weight: 400;
+    color: $darkBlue;
+    margin-bottom: 8px;
+}
+
+.timeSlots{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.timeSlot{
+    max-width: 76px;
+    width: 100%;
+    height: 46px;
+    background: none;
+    outline: none;
+    border: 1px solid $purpleBorderColor;
+    padding: 0 17px;
+    font-size: 16px;
+    font-weight: 400;
+    color: $darkBlue;
+    background-color: $whiteColor;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: box-shadow .25s ease;
+
+    &.active{
+        border: 1px solid $purpleColor;
+        box-shadow: 0 0 0 2px $purpleColor; 
+        outline: none;
+    }
+}
+
+.observanceCtn{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.observanceName{
+    font-size: 14px;
+    font-weight: 400;
+    color: $darkBlue;
+    max-width: 200px;
+    width: 100%;
+}
+
+@media screen and (max-width: 468px){
+    .timeSlots{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}

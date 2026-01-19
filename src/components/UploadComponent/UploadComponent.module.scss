@@ -1,0 +1,78 @@
+@import '../../styles/colors.scss';
+
+.uploadInputContainer{
+    max-width: 426px;
+    width: 100%;
+    color: $darkBlue;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.header{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.uploadInputCtn{
+    background-color: $whiteColor;
+    max-width: 426px;
+    padding: 12px;
+    width: 100%;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid $purpleBorderColor;
+
+    &.errorUpload{
+        border: 1px solid $errorBorderColor;
+        box-shadow: 0 0 0 2px $errorBorderColor; 
+        background-color: $errorBackgroundColor;
+        outline: none;
+    }
+}
+
+.text{
+    font-size: 16px;
+    font-weight: 400;
+    color: $grayColor;
+
+    span{
+        color: $purpleColor;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.fileNamePreview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    .closeIcon{
+        outline: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        background: url('../../../public/icons/close.svg') no-repeat center center;
+        background-size: contain;
+        transition: .25s ease;
+
+        &:hover{
+            background-image: url('../../../public/icons/closeHover.svg');
+        }
+    }
+}
+
+@media screen and (max-width: 468px){
+    .uploadInputContainer{
+        width: 94%;
+    }
+}

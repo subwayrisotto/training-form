@@ -1,0 +1,64 @@
+@import '../../styles/colors.scss';
+
+.formWrapper{
+    max-width: 450px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header{
+    font-size: 24px;
+    font-weight: 500;
+    color: $darkBlue;
+    padding: 0 12px;
+    margin-bottom: 32px;
+}
+
+.submitBtn{
+    max-width: 426px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px 0;
+    border-radius: 4px;
+    background-color: $purpleColor;
+    border: 1px solid $purpleColor;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    color: $whiteColor;
+    transition: .25s ease;
+    // margin-bottom: 25px;
+    margin: 0 12px 25px 12px;
+
+    &:hover{
+        background-color: $purpleColorHover;
+        border: 1px solid $purpleColorHover;
+    }
+
+    &.disabled{
+        background-color: $purpleBorderColor;
+        border: 1px solid $purpleBorderColor;
+    }
+}
+
+.formWrapper form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.submitError{
+    color: $darkBlue
+}
+
+@media screen and (max-width: 468px){
+    .submitBtn{
+        width: 95%;
+    }
+}

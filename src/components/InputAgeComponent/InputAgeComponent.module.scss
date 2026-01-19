@@ -1,0 +1,85 @@
+@import '../../styles/colors.scss';
+
+.inputAgeWrapper{
+  padding: 0 12px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.inputAgeLabel{
+  font-size: 16px;
+  font-weight: 400;
+  color: $darkBlue;
+  margin-bottom: 8px;
+}
+
+.textContent{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2px;
+  font-size: 12px;
+  font-weight: 400;
+  color: $darkBlue;
+}
+
+.slider {
+  position: relative;
+  height: 4px;
+  background: $purpleBorderColor;
+  border-radius: 4px;
+  cursor: pointer;
+  top: 8px;
+}
+
+.sliderLine {
+  position: absolute;
+  height: 100%;
+  background: $purpleColor;
+  border-radius: 4px;
+}
+
+.sliderThumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+}
+
+.sliderThumbCircle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: $purpleColor;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  position: relative;
+}
+
+.valueCtn{
+  position: absolute;
+  top: 20px;
+  color: $purpleColor;
+}
+
+
+.valueImg{
+  width: 37px;
+  height: 31px;
+  background: url('../../../public/icons/union.svg') no-repeat center center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  padding-top: 5px;
+}
