@@ -162,6 +162,7 @@ function FormComponent() {
         }catch(e){
             console.log(e);
             setSubmittingError('Something went wrong, maybe they allowed us to made this error :)')
+            console.log(inputData)
         }finally{
             setIsSubmitting(false);
         }
@@ -270,14 +271,7 @@ function FormComponent() {
             <div className={styles.submitError}>
                 {submittingError}
 
-                <p>But don't worry, this is data which we tried to send 1 sec ago:</p>
-                <p>First Name: {inputData.firstName}</p>
-                <p>Last Name: {inputData.lastName}</p>
-                <p>Email: {inputData.email}</p>
-                <p>Age: {inputData.age}</p>
-                <p>Reservation Date: {inputData.reservationDate}</p>
-                <p>Reservation Time: {inputData.reservationTime}</p>
-                <p>Photo: {inputData.photo?.name}</p>
+                <p>But check console, it's data which was sent!</p>
             </div>
             )}
     </div>
